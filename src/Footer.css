@@ -1,0 +1,71 @@
+.custom-footer {
+    background-color: rgb(230, 227, 227); /* Silver background for entire footer */
+    padding: 40px 0; /* Add padding to the top and bottom for spacing */
+    width: 100%;
+    height: 50vh;
+    color: black;
+  }
+  
+  .custom-footer .store-heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .custom-footer .store-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .custom-footer .store-list li {
+    margin: 5px 0;
+    font-size: 16px;
+  }
+  
+  .custom-footer .brand-title {
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+  .custom-footer .brand-text {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  
+  .custom-footer .sign-up-text {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .custom-footer .btn-outline-dark {
+    border-color: black;
+    color: black;
+    padding: 10px 20px;
+  }
+  
+  .custom-footer h1, 
+  .custom-footer h4, 
+  .custom-footer h6, 
+  .custom-footer p {
+    background-color: transparent !important; /* Ensure no background color */
+  }
+  
+
+  @media (max-width: 576px) {
+    .custom-footer {
+      text-align: center;
+      padding: 20px 10px;
+    }
+  
+    .custom-footer .brand-title {
+      font-size: 24px;
+    }
+  
+    .custom-footer .sign-up-text {
+      font-size: 14px;
+    }
+  
+    .custom-footer .store-heading {
+      font-size: 20px;
+    }
+  }

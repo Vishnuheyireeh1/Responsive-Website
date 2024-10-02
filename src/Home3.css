@@ -1,0 +1,65 @@
+/* Card container */
+.card {
+    position: relative;
+    overflow: hidden; /* Ensure content doesn’t spill outside the card */
+    width: 100%; /* Responsive width */
+    max-width: 400px; /* Max width for larger screens */
+    margin: 20px auto; /* Center the card with margin */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for visual depth */
+    transition: transform 0.1s ease; /* Smooth scale on hover */
+}
+
+/* Card hover effect - scaling up */
+.card:hover {
+    transform: scale(1.05); /* Slightly scale up the card */
+}
+
+/* The overlay that appears on hover */
+.cardBody {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; /* Full coverage of the card */
+    background-color: rgba(189, 186, 186, 0.6); /* Slightly more opaque for better visibility */
+    backdrop-filter: blur(8px); /* Blurring the content beneath */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the overlay content */
+    text-align: center;
+    color: black; /* Ensure dark text on the overlay */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out; /* Smooth fade-in on hover */
+}
+
+/* Show the overlay when hovering over the card */
+.card:hover .cardBody {
+    opacity: 1; /* Make the overlay visible */
+}
+
+/* Responsive image inside the card */
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px; /* Match the card’s rounded corners */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card {
+        max-width: 90%; /* More space on smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        max-width: 100%; /* Full width on mobile */
+    }
+
+    .cardBody {
+        font-size: 14px; /* Smaller text on mobile */
+        padding: 15px; /* Adjust padding for mobile */
+    }
+}
